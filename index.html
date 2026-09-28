@@ -6,19 +6,23 @@
   <title>Zach Jaspers — Enterprise GTM & Solutions Systems</title>
   <meta name="description" content="A portfolio of systems for making complex enterprise discovery, demonstrations, customer proof, and solution strategy more repeatable." />
   <style>
-    :root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--bg:#f8fafc;--card:#ffffff;--accent:#344054;--soft:#eef2f6}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-    a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}.top{padding:20px 0;border-bottom:1px solid var(--line);background:rgba(255,255,255,.88);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:700;text-decoration:none}.navlinks{display:flex;gap:18px;font-size:14px;color:var(--muted)}.navlinks a{text-decoration:none}
-    .hero{padding:92px 0 64px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.045em;max-width:900px;margin:14px 0 22px}.lead{font-size:clamp(18px,2.5vw,24px);max-width:760px;color:#475467;margin:0}.hero-note{margin-top:28px;display:inline-flex;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:white;font-size:14px;color:var(--muted)}
-    section{padding:54px 0}.section-title{font-size:32px;letter-spacing:-.025em;margin:0 0 12px}.section-copy{max-width:760px;color:var(--muted);margin:0 0 28px}.system{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:155px}.num{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.step h3{margin:18px 0 6px;font-size:18px}.step p{margin:0;color:var(--muted);font-size:14px}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;min-height:320px}.tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.card h3{font-size:25px;letter-spacing:-.025em;margin:10px 0}.card p{color:var(--muted);margin:0 0 20px}.meta{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;font-size:14px}.meta strong{color:var(--ink)}.status{display:inline-block;background:var(--soft);padding:5px 9px;border-radius:999px;font-size:12px;font-weight:600;width:max-content}
+    :root{--ink:#101828;--muted:#667085;--line:#e4e7ec;--bg:#f8fafc;--card:#ffffff;--accent:#175cd3;--accent-dark:#1849a9;--soft:#eef2f6;--blue-soft:#eff8ff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+    a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}.top{padding:20px 0;border-bottom:1px solid var(--line);background:rgba(255,255,255,.9);position:sticky;top:0;backdrop-filter:blur(10px);z-index:10}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:700;text-decoration:none}.navlinks{display:flex;gap:18px;font-size:14px;color:var(--muted)}.navlinks a{text-decoration:none}
+    .hero{padding:92px 0 64px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.045em;max-width:900px;margin:14px 0 22px}.lead{font-size:clamp(18px,2.5vw,24px);max-width:800px;color:#475467;margin:0}.hero-note{margin-top:28px;display:inline-flex;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:white;font-size:14px;color:var(--muted)}
+    section{padding:54px 0}.section-title{font-size:32px;letter-spacing:-.025em;margin:0 0 12px}.section-copy{max-width:800px;color:var(--muted);margin:0 0 28px}.system{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;min-height:170px}.num{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.step h3{margin:18px 0 6px;font-size:18px}.step p{margin:0;color:var(--muted);font-size:14px}
+    .workflow{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:26px}.workflow-row{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:12px}.workflow-box{padding:18px;border-radius:14px;background:var(--soft);min-height:112px}.workflow-box strong{display:block;margin-bottom:5px}.workflow-box span{font-size:14px;color:var(--muted)}.arrow{color:#98a2b3;font-size:22px;font-weight:700;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;min-height:340px}.featured{border-color:#84adff;box-shadow:0 0 0 3px rgba(23,92,211,.05)}.tag{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.card h3{font-size:25px;letter-spacing:-.025em;margin:10px 0}.card p{color:var(--muted);margin:0 0 20px}.meta{margin-top:auto;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:8px;font-size:14px}.meta strong{color:var(--ink)}.status{display:inline-block;background:var(--soft);padding:5px 9px;border-radius:999px;font-size:12px;font-weight:600;width:max-content}.status.live{background:var(--blue-soft);color:var(--accent-dark)}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:700;border:1px solid var(--line);background:#fff}.button.primary{background:var(--accent);border-color:var(--accent);color:white}.button.primary:hover{background:var(--accent-dark)}
+    .outputs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}.output{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.output .label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.output h3{margin:8px 0;font-size:21px}.output p{margin:0;color:var(--muted)}
     .demo{border:1px dashed #98a2b3;border-radius:16px;padding:28px;background:#fff}.demo h3{margin-top:0}.demo ol{padding-left:22px;color:var(--muted)}.demo-callout{padding:18px;background:var(--soft);border-radius:12px;margin-top:18px;font-size:14px}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.principle{padding:20px 0;border-top:1px solid var(--line)}.principle h3{font-size:17px;margin:0 0 6px}.principle p{font-size:14px;color:var(--muted);margin:0}
     .about{display:grid;grid-template-columns:1.1fr .9fr;gap:42px}.aboutbox{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.aboutbox p{margin:0;color:var(--muted)}footer{padding:54px 0 70px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-    @media(max-width:800px){.system,.grid,.principles,.about{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:64px}.step,.card{min-height:auto}}
+    @media(max-width:900px){.system{grid-template-columns:1fr 1fr}.workflow-row{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
+    @media(max-width:800px){.system,.grid,.principles,.about,.outputs{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:64px}.step,.card{min-height:auto}}
   </style>
 </head>
 <body>
-  <header class="top"><div class="wrap nav"><a class="brand" href="#">Zach Jaspers</a><nav class="navlinks"><a href="#system">System</a><a href="#portfolio">Portfolio</a><a href="#demo">Demo</a><a href="#about">About</a></nav></div></header>
+  <header class="top"><div class="wrap nav"><a class="brand" href="#">Zach Jaspers</a><nav class="navlinks"><a href="#system">System</a><a href="#portfolio">Portfolio</a><a href="#workflow">Workflow</a><a href="#about">About</a></nav></div></header>
 
   <main>
     <section class="hero"><div class="wrap">
@@ -29,13 +33,14 @@
     </div></section>
 
     <section id="system"><div class="wrap">
-      <h2 class="section-title">One connected operating system</h2>
-      <p class="section-copy">These tools are not separate side projects. Together they capture how I think about moving from an ambiguous buyer problem to a credible enterprise story, then turning what works into reusable GTM infrastructure.</p>
+      <h2 class="section-title">From raw discovery to a stronger demo</h2>
+      <p class="section-copy">These tools are designed as a connected workflow. I can capture and normalize discovery, expose what is missing, refine the customer operating model, then pass that structured output into a demo system that turns it into a clear buyer-specific story.</p>
       <div class="system">
-        <div class="step"><div class="num">01</div><h3>Discover</h3><p>Capture outcomes, triggers, ownership, flow, decisions, variance, exceptions, proof, and feedback.</p></div>
-        <div class="step"><div class="num">02</div><h3>Translate</h3><p>Distill discovery into a clear solution strategy, persona plan, and demo narrative.</p></div>
-        <div class="step"><div class="num">03</div><h3>Demonstrate</h3><p>Build repeatable, persona-first demonstrations that still reflect the buyer's actual operating model.</p></div>
-        <div class="step"><div class="num">04</div><h3>Reuse</h3><p>Capture customer evidence, scripts, stories, and patterns so the organization compounds what it learns.</p></div>
+        <div class="step"><div class="num">01</div><h3>Capture</h3><p>Start with raw notes from calls, workshops, emails, documents, or an existing discovery template.</p></div>
+        <div class="step"><div class="num">02</div><h3>Structure</h3><p>Fieldnote organizes the material into reusable discovery concepts instead of leaving it as chronological notes.</p></div>
+        <div class="step"><div class="num">03</div><h3>Find gaps</h3><p>Reload the structured output, review facts, hypotheses, and unknowns, and intentionally fill what is still missing.</p></div>
+        <div class="step"><div class="num">04</div><h3>Standardize</h3><p>Move the refined discovery output into the demo script system and translate it into a deliberate demo narrative.</p></div>
+        <div class="step"><div class="num">05</div><h3>Reuse</h3><p>Preserve the discovery model, demo structure, proof, and lessons so the next pursuit starts from a stronger baseline.</p></div>
       </div>
     </div></section>
 
@@ -43,25 +48,54 @@
       <h2 class="section-title">Selected systems</h2>
       <p class="section-copy">Each artifact started with an operating problem I encountered repeatedly in enterprise GTM. The goal was not simply to automate work, but to make good judgment easier to reproduce.</p>
       <div class="grid">
-        <article class="card"><div class="tag">Operational Discovery</div><h3>Fieldnote Discovery App</h3><p>A structured discovery model for capturing what a customer is trying to change, how work actually flows, who owns decisions, where variance occurs, what breaks, and how value can be proven.</p><div class="meta"><div><strong>Problem:</strong> discovery notes become anecdotes instead of an operating model.</div><div><strong>Output:</strong> reusable structured concepts that can inform pilots, demos, value hypotheses, and follow-up.</div><span class="status">Demo/screenshots to add</span></div></article>
+        <article class="card featured">
+          <div class="tag">Operational Discovery</div><h3>Fieldnote Discovery App</h3>
+          <p>A discovery tracking and standardization system for turning rough customer notes into a structured operating model that can be reviewed, enriched, reused, and passed downstream into solution strategy.</p>
+          <div class="meta">
+            <div><strong>How I use it:</strong> export the discovery template, populate it from my notes, load it back into Fieldnote, then review and fill gaps instead of treating one call as "complete" discovery.</div>
+            <div><strong>What it tracks:</strong> outcomes, triggers, ownership, flow, decisions, variance, coordination, exceptions, proof controls, and visibility / feedback.</div>
+            <div><strong>Why it matters:</strong> it separates facts, hypotheses, unknowns, and source notes so the team can see what is known versus what still needs validation.</div>
+            <span class="status live">Live interactive demo</span>
+          </div>
+          <div class="actions"><a class="button primary" href="https://fieldnote-discovery.jaspers-zach.chatgpt.site" target="_blank" rel="noopener noreferrer">Launch Fieldnote ↗</a></div>
+        </article>
 
-        <article class="card"><div class="tag">Demo Strategy</div><h3>Demo Script Builder</h3><p>A system for turning discovery and persona context into a deliberate demo plan: what to show, why it matters, how to transition, and where to branch based on buyer priorities.</p><div class="meta"><div><strong>Problem:</strong> demos are often assembled feature-by-feature instead of around a decision narrative.</div><div><strong>Output:</strong> structured persona-first demo plans and scripts.</div><span class="status">Demo/screenshots to add</span></div></article>
+        <article class="card"><div class="tag">Demo Strategy</div><h3>Early-Stage Demo Builder</h3><p>A system for taking structured discovery and persona context and turning it into a deliberate early-stage demo: what to show, what to say, why it matters, and where the story should branch.</p><div class="meta"><div><strong>Problem:</strong> early demos too easily become generic feature tours.</div><div><strong>Output:</strong> a reusable persona-first demo structure with discovery-specific branches.</div><span class="status">Live app link to add</span></div></article>
 
-        <article class="card"><div class="tag">Enablement</div><h3>Demo Script Standardizer</h3><p>A repeatability layer for taking raw demo material and shaping it into a consistent structure without removing the judgment that makes an enterprise demonstration relevant.</p><div class="meta"><div><strong>Problem:</strong> strong demos depend too heavily on individual SC style and tribal knowledge.</div><div><strong>Output:</strong> standardized scripts that can be reused, coached, adapted, and improved.</div><span class="status">60–90 sec walkthrough planned</span></div></article>
+        <article class="card"><div class="tag">Enablement</div><h3>Demo Script Standardizer</h3><p>A repeatability layer that takes discovery and raw demo content and shapes it into a consistent, coachable script without removing the judgment that makes an enterprise demonstration relevant.</p><div class="meta"><div><strong>Input:</strong> refined discovery output plus raw demo material.</div><div><strong>Output:</strong> a standardized script that can be reused, coached, adapted, and improved.</div><span class="status">60–90 sec walkthrough planned</span></div></article>
 
         <article class="card"><div class="tag">Customer Evidence</div><h3>Customer Story Selector</h3><p>A searchable way to match the right customer evidence to the buyer's industry, use case, persona, and business outcome instead of relying on memory or generic logo slides.</p><div class="meta"><div><strong>Problem:</strong> valuable proof exists, but sellers cannot reliably find the most relevant story in the moment.</div><div><strong>Output:</strong> faster access to credible, context-specific customer evidence.</div><span class="status">Existing prototype</span></div></article>
       </div>
     </div></section>
 
+    <section id="workflow"><div class="wrap">
+      <h2 class="section-title">The discovery-to-demo handoff</h2>
+      <p class="section-copy">The most important part is the handoff between the tools. Fieldnote makes discovery portable. The next system can then use that structured context rather than forcing the SC to reinterpret scattered notes every time.</p>
+      <div class="workflow">
+        <div class="workflow-row">
+          <div class="workflow-box"><strong>1. Raw discovery</strong><span>Call notes, workshop observations, emails, documents, and open questions.</span></div>
+          <div class="arrow">→</div>
+          <div class="workflow-box"><strong>2. Fieldnote</strong><span>Normalize the material, reload the template, validate what is known, and intentionally expose gaps.</span></div>
+          <div class="arrow">→</div>
+          <div class="workflow-box"><strong>3. Demo system</strong><span>Use the refined discovery output to generate and standardize a demo narrative tied to the buyer's operating reality.</span></div>
+        </div>
+      </div>
+
+      <div class="outputs">
+        <article class="output"><div class="label">Output path 01</div><h3>Structured discovery record</h3><p>A durable record of the customer's operating model: what they are trying to change, how work happens today, where decisions and exceptions occur, what is known, and what still needs validation.</p></article>
+        <article class="output"><div class="label">Output path 02</div><h3>Demo-ready context</h3><p>A concise, reusable input for the downstream demo system so persona, business problem, workflow, proof requirements, open questions, and relevant branches can shape the story.</p></article>
+      </div>
+    </div></section>
+
     <section id="demo"><div class="wrap">
       <h2 class="section-title">Featured walkthrough: Demo Script Standardizer</h2>
-      <p class="section-copy">This is the best tool to demonstrate rather than publish. A short walkthrough shows the operating thinking, protects internal details, and gives me a concrete artifact to use in interviews.</p>
-      <div class="demo"><h3>Recommended 75-second recording</h3><ol><li><strong>0–10 sec:</strong> State the problem — raw demo scripts are inconsistent and hard to coach or reuse.</li><li><strong>10–25 sec:</strong> Show a sanitized input with rough notes, features, persona, and discovery context.</li><li><strong>25–50 sec:</strong> Run the standardization flow and show how the material is reorganized into a clear demo arc.</li><li><strong>50–65 sec:</strong> Highlight the output: buyer outcome, talk track, proof point, transition, and optional branch.</li><li><strong>65–75 sec:</strong> Close with the operating value — individual SC judgment becomes reusable team infrastructure.</li></ol><div class="demo-callout"><strong>Recording rule:</strong> use a fictional company, fictional buyer, and generic product capabilities. The portfolio should prove the method without publishing employer IP, customer information, internal prompts, or proprietary data.</div></div>
+      <p class="section-copy">This is the best tool to demonstrate rather than publish. A short walkthrough can show the complete transformation from structured discovery to a repeatable script while protecting internal implementation details.</p>
+      <div class="demo"><h3>Recommended 75-second recording</h3><ol><li><strong>0–10 sec:</strong> Show the customer context coming out of Fieldnote.</li><li><strong>10–25 sec:</strong> Show the raw demo material that would normally require manual interpretation.</li><li><strong>25–50 sec:</strong> Run the standardization flow and show how the material is reorganized into a clear demo arc.</li><li><strong>50–65 sec:</strong> Highlight the output: buyer outcome, talk track, proof point, transition, and optional branch.</li><li><strong>65–75 sec:</strong> Close with the operating value — discovery becomes portable context and individual SC judgment becomes reusable team infrastructure.</li></ol><div class="demo-callout"><strong>Portfolio rule:</strong> use a fictional company, fictional buyer, and generic product capabilities. The portfolio should prove the method without publishing employer IP, customer information, internal prompts, or proprietary data.</div></div>
     </div></section>
 
     <section><div class="wrap">
       <h2 class="section-title">Design principles</h2>
-      <div class="principles"><div class="principle"><h3>Structure before automation</h3><p>The system should clarify the decision process before technology accelerates it.</p></div><div class="principle"><h3>Judgment stays human</h3><p>Repeatability should improve quality without turning enterprise selling into a rigid checklist.</p></div><div class="principle"><h3>Outputs should compound</h3><p>Discovery, demos, proof, and customer learning should become reusable organizational assets.</p></div></div>
+      <div class="principles"><div class="principle"><h3>Discovery is iterative</h3><p>A completed call is not completed discovery. The system should make missing context visible and give the team a way to return to it.</p></div><div class="principle"><h3>Structure before automation</h3><p>The system should clarify the operating problem before technology accelerates the production of a demo or deliverable.</p></div><div class="principle"><h3>Outputs should compound</h3><p>Discovery, demos, proof, and customer learning should become reusable organizational assets instead of disappearing into one opportunity.</p></div></div>
     </div></section>
 
     <section id="about"><div class="wrap about"><div><h2 class="section-title">Why I build this way</h2><p class="section-copy">My background spans implementation consulting, enterprise solution consulting, technical validation, executive demonstrations, customer workshops, and complex enterprise sales cycles. The repeated pattern has been stepping into high-stakes ambiguity, creating structure, and translating it into something customers and internal teams can act on.</p></div><div class="aboutbox"><p><strong>What I am interested in:</strong><br><br>Growth-stage environments where enterprise GTM is still being built and where Solutions can influence how discovery, pilots, demonstrations, product feedback, implementation handoff, and strategic selling work together.</p></div></div></section>
