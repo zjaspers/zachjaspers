@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Early-Stage Demo System — Zach Jaspers</title>
+<meta name="description" content="How Zach Jaspers designed a buyer-led demo system that turns a horizontal enterprise platform into reusable first-demo stories, adapted through discovery.">
+<style>:root{--cream:#f5f0e2;--paper:#fbf8ef;--green:#153d2b;--rust:#9a4431;--ink:#24352b;--muted:#69766e;--line:#d7d0bd;--soft:#e8ebdf}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.58}a{color:inherit}.wrap{max-width:1060px;margin:auto;padding:0 34px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--green);font-weight:600}.top{border-bottom:1px solid var(--line);padding:20px 0}.nav{display:flex;justify-content:space-between;align-items:center}.brand{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:700;color:var(--green);text-decoration:none}.back{font-size:13px;text-decoration:none}.hero{padding:66px 0 58px;border-bottom:1px solid var(--line)}.eyebrow,.label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);font-weight:700}.hero h1{font-size:clamp(46px,6vw,72px);line-height:.98;letter-spacing:-.035em;margin:14px 0 20px}.lead{font-size:19px;max-width:780px;color:#4d5f54}.actions{display:flex;gap:20px;align-items:center;margin-top:28px;flex-wrap:wrap}.button{background:var(--green);color:white;padding:11px 18px;border-radius:4px;text-decoration:none;font-weight:700;font-size:14px}.textlink{font-size:14px;font-weight:700;text-decoration:none;border-bottom:1px solid var(--green)}section{padding:58px 0;border-bottom:1px solid var(--line)}.section-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}.section-title{font-size:36px;line-height:1.05;margin:8px 0 0}.section-copy{font-size:17px;color:#526158;margin:0 0 24px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:28px}.block{border-top:1px solid var(--line);padding-top:16px}.block h3{font-size:21px;margin:0 0 7px}.block p{margin:0;color:var(--muted);font-size:14px}.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:20px 18px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.num{font-family:Georgia,"Times New Roman",serif;color:var(--rust);font-size:17px}.step h3{font-size:19px;margin:12px 0 6px}.step p{margin:0;color:var(--muted);font-size:13px}.outputs{display:grid;grid-template-columns:1fr 1fr;gap:20px}.output{background:var(--soft);padding:24px;border-radius:6px}.output h3{font-size:23px;margin:8px 0}.output p{margin:0;color:#53635a;font-size:14px}.callout{background:var(--paper);border:1px solid var(--line);padding:28px;border-radius:6px}.callout h3{font-size:26px;margin:6px 0 12px}.callout p{margin:0;color:#53635a}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.principle{border-top:1px solid var(--line);padding-top:14px}.principle h3{font-size:19px;margin:0 0 7px}.principle p{font-size:14px;color:var(--muted);margin:0}.footer{background:var(--green);color:#f7f2e5;padding:38px 0;font-size:13px}.footer a{color:#fff}@media(max-width:820px){.section-grid,.twocol,.outputs,.principles{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}.hero{padding-top:48px}}
+.workflow{grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;padding:0;margin:24px 0 0}.section-heading{margin-bottom:24px}.flow{font-family:Georgia,"Times New Roman",serif;color:var(--green);font-size:22px;line-height:1.5}.context{font-size:14px;color:#526158;max-width:780px;margin-top:24px}.plays{margin-top:28px}.play{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;padding:24px 0;border-top:1px solid var(--line)}.play h3{font-size:26px;margin:0 0 8px}.play p{margin:0 0 10px;color:#526158;font-size:15px}.play .story{color:var(--green);font-weight:700;font-size:15px}.authoring{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:28px 0 0}.authoring li{border-top:1px solid var(--line);padding-top:14px}.authoring h3{font-size:21px;margin:8px 0}.authoring p{font-size:14px;color:#526158;margin:0}.callout{margin-top:24px}.section-grid>.callout{margin-top:0}.principle p,.step p,.block p{color:#526158}.skip{position:absolute;left:16px;top:-100px;background:var(--green);color:white;padding:12px;z-index:1}.skip:focus{top:8px}a:focus-visible{outline:3px solid var(--rust);outline-offset:5px}section[id]{scroll-margin-top:24px}
+@media(max-width:820px){.workflow,.play{grid-template-columns:1fr}.play{gap:10px}.authoring{grid-template-columns:repeat(2,minmax(0,1fr))}.section-grid{gap:28px}}
+@media(max-width:480px){.wrap{padding:0 22px}.nav{gap:18px;align-items:flex-start}.back{max-width:90px;text-align:right}.hero h1{font-size:44px}.authoring{grid-template-columns:1fr}.flow{font-size:20px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap nav"><a class="brand" href="index.html">Zach Jaspers</a><a class="back" href="index.html#work">← Back to work</a></div></header>
+<main id="main">
+<section class="hero"><div class="wrap">
+<div class="eyebrow">Demo Strategy · Presales Systems · Project Case Study</div>
+<h1>Early-Stage Demo System</h1>
+<p class="lead">A system that turns a horizontal enterprise platform into a small set of buyer-specific, reusable first-demo stories. It helps Solution Consultants choose the right story, run a focused 30-minute flow, and adapt with discovery without rebuilding from scratch.</p>
+<div class="actions"><a class="button" href="#how">Explore the operating model ↓</a><a class="textlink" href="#plays">See the three plays ↓</a></div>
+<p class="context">Originally built as an internal system for a horizontal enterprise platform. This public case study generalizes the methodology and sanitizes the examples; customer identities, internal scripts, and company-specific product details are omitted.</p>
+</div></section>
+<section><div class="wrap section-grid">
+<div><div class="label">What it is</div><h2 class="section-title">“Who am I meeting with, and what demo should I run?”</h2></div>
+<div><p class="section-copy">The seller-facing webpage puts a demo methodology into a usable workflow. A Solution Consultant (SC) selects a buyer-aligned play and gets an ordered run sheet: what to demonstrate, why it matters, and enough talk track to carry the story.</p><div class="twocol"><div class="block"><h3>Ready for the meeting</h3><p>Standard intro decks frame the conversation. The run sheet carries that framing into the demonstration.</p></div><div class="block"><h3>Depth when it is useful</h3><p>Proof points, transitions, and discovery branches sit beneath the main steps so the delivery flow stays readable.</p></div></div></div>
+</div></section>
+<section><div class="wrap section-grid">
+<div><div class="label">The problem</div><h2 class="section-title">Platform breadth makes the first story harder to choose.</h2></div>
+<div><p class="section-copy">A horizontal platform can support many workflows and buyers. That breadth creates a recurring presales problem: the first demo becomes a tour of everything the product can do, or each SC has to construct a narrative from scratch.</p><p class="section-copy">I worked backward from patterns in actual demos to identify reusable operating stories. The starting point was the buyer’s responsibility and the belief the demo needed to establish. Capabilities earned their place by helping prove that story.</p></div>
+</div></section>
+<section id="how"><div class="wrap">
+<div class="label">The core operating model</div><h2 class="section-title">Start with the buyer. Follow the work.</h2>
+<p class="flow">Buyer → Standard Play → Standard Story → Discovery Branches</p>
+<ol class="workflow">
+<li class="step"><div class="num">01</div><h3>Buyer</h3><p>Identify who owns the problem, what they are accountable for, and where their operating story begins.</p></li>
+<li class="step"><div class="num">02</div><h3>Standard Play</h3><p>Select the repeatable business problem and the belief the demonstration needs to establish.</p></li>
+<li class="step"><div class="num">03</div><h3>Standard Story</h3><p>Follow a coherent sequence of work, handoffs, and visible proof through an ordered run sheet.</p></li>
+<li class="step"><div class="num">04</div><h3>Discovery Branches</h3><p>Use what has been learned to adapt the scenario or add the relevant depth while preserving the core story.</p></li>
+</ol></div></section>
+<section id="plays"><div class="wrap">
+<div class="label">Three generic play archetypes</div><h2 class="section-title">Different buyers. Different entry points.</h2>
+<div class="plays">
+<article class="play"><div><h3>Operations</h3><p>For the person responsible for day-to-day execution.</p></div><div><p class="story">Start → Route → Execute → Verify → Manage → Measure</p><p>Show how a priority becomes assigned work, how completion is verified, and how leaders handle exceptions and see results.</p><p><strong>Belief to establish:</strong> operational priorities can become visible, verified execution with less manual chasing.</p></div></article>
+<article class="play"><div><h3>Communications</h3><p>For the person responsible for getting the right message to the right audience.</p></div><div><p class="story">Plan → Target → Publish → Experience → Act → Measure</p><p>Begin with the publisher’s intent, follow the recipient’s experience, and connect communication to action and feedback.</p><p><strong>Belief to establish:</strong> communication can be managed through the response it creates, beyond the act of publishing.</p></div></article>
+<article class="play"><div><h3>Initiative Execution</h3><p>For the person accountable for a coordinated program or change.</p></div><div><p class="story">Plan → Coordinate → Target → Launch → Execute → Monitor → Measure</p><p>Start upstream with the initiative owner, then follow how a plan reaches the people doing the work and how progress returns to the owner.</p><p><strong>Belief to establish:</strong> a distributed initiative can retain coordination, accountability, and visibility as it moves into execution.</p></div></article>
+</div></div></section>
+<section><div class="wrap section-grid">
+<div><div class="label">The 30-minute first demo</div><h2 class="section-title">Earn the next conversation.</h2></div>
+<div><p class="section-copy">The first demo has a deliberately limited job: help the buyer recognize their problem, understand a credible path to an outcome, and identify what deserves deeper validation. A focused 30-minute flow provides a repeatable starting point.</p><p class="section-copy">The story follows work as it changes hands. Personas change when the process requires a handoff. Each moment answers a business question and leaves room for the buyer to test the story against their own reality.</p><div class="callout"><div class="label">A useful constraint</div><h3>Every step needs a reason to be there.</h3><p>If a capability does not advance the buyer’s core story or answer a discovery-backed question, save it for a later conversation.</p></div></div>
+</div></section>
+<section><div class="wrap">
+<div class="label">CORE vs BRANCH</div><h2 class="section-title section-heading">Keep the spine stable. Adapt with purpose.</h2>
+<div class="outputs"><div class="output"><div class="label">Core</div><h3>The repeatable story</h3><p>The essential sequence that establishes the play’s central belief: something requires action, work reaches an owner, execution produces proof, and the accountable leader can respond. This is the stable 30-minute spine.</p></div><div class="output"><div class="label">Branch</div><h3>The discovery-led depth</h3><p>A relevant variation or extension activated by a buyer’s operating context. Discovery can change the trigger, constraints, or proof requirement without forcing a new demo architecture.</p></div></div>
+<div class="callout"><div class="label">Illustrative example</div><h3>Same execution story. Different operating conditions.</h3><p>An Operations play might begin with a routine check or an urgent exception. If discovery reveals that readiness affects who can perform the work, the SC can explore that branch, then return to execution and verification. The buyer’s context changes what needs emphasis.</p></div>
+</div></section>
+<section><div class="wrap">
+<div class="label">The reusable authoring unit</div><h2 class="section-title">Make each story moment coachable.</h2>
+<p class="flow">Business Question → Setup → Show → Proof → Value Message → Transition</p>
+<p class="section-copy">This structure sits behind the scripts. Authors use it to build consistent moments; SCs see a usable run sheet without having to consciously work through the framework during delivery.</p>
+<ol class="authoring">
+<li><div class="num">01</div><h3>Business Question</h3><p>What does the buyer need answered at this point in the story?</p></li>
+<li><div class="num">02</div><h3>Setup</h3><p>Establish the situation, actor, and reason the next action matters.</p></li>
+<li><div class="num">03</div><h3>Show</h3><p>Demonstrate the specific action or handoff that answers the question.</p></li>
+<li><div class="num">04</div><h3>Proof</h3><p>Make the result observable so the audience can see what changed.</p></li>
+<li><div class="num">05</div><h3>Value Message</h3><p>Connect that evidence to the buyer’s operating outcome.</p></li>
+<li><div class="num">06</div><h3>Transition</h3><p>Explain why the next moment follows from this one.</p></li>
+</ol></div></section>
+<section><div class="wrap section-grid">
+<div><div class="label">How discovery feeds the system</div><h2 class="section-title">Give discovery somewhere to go.</h2></div>
+<div><p class="section-copy">Discovery supplies the operating context: the desired outcome, the trigger for work, its owner, the handoffs, the exceptions, and the evidence of success. The SC uses that context to select a play, adjust the scenario, and choose branches worth exploring.</p><p class="section-copy">Unknowns remain questions to validate. A standard story provides a starting hypothesis; the buyer’s answers determine where it needs to change.</p><div class="block"><h3>The next connection</h3><p>A structured discovery record could eventually recommend a play and relevant branches. That is a future integration path; this case study describes the methodology and seller-guided selection workflow.</p></div><div class="actions"><a class="textlink" href="fieldnote.html">Explore the Fieldnote discovery workflow →</a></div></div>
+</div></section>
+<section><div class="wrap section-grid">
+<div><div class="label">Why this matters</div><h2 class="section-title">Scale the judgment behind a good demo.</h2></div>
+<div><p class="section-copy">The work captures decisions that often stay in an experienced SC’s head: where to begin, what to prove, when to change perspective, and which details can wait. Those decisions become reusable material for preparation, coaching, and refinement.</p><p class="section-copy">The intended leverage is a team that can start from shared story architecture and spend its judgment on the buyer’s actual differences. Leaders can review the reasoning behind a demo, and authors can improve a play or story moment for future use.</p><p class="section-copy">The contribution is the operating model connecting buyer context, narrative, and proof. The webpage makes that model practical to use.</p></div>
+</div></section>
+<section><div class="wrap">
+<div class="label">Design principles</div><h2 class="section-title section-heading">What the system should preserve.</h2>
+<div class="principles"><div class="principle"><h3>Buyer before breadth</h3><p>Begin with accountability and the outcome the buyer needs to believe is possible.</p></div><div class="principle"><h3>Follow the work</h3><p>Let actions, handoffs, and evidence determine the sequence and persona changes.</p></div><div class="principle"><h3>Standardize with room for judgment</h3><p>Keep a reusable core, earn each branch through discovery, and make useful learning available to the next SC.</p></div></div>
+</div></section>
+</main><footer class="footer"><div class="wrap"><a href="index.html#work">← Zach Jaspers · Selected work</a></div></footer>
+</body>
+</html>
