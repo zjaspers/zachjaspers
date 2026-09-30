@@ -1,0 +1,51 @@
+name: Add Cloudflare Analytics
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-cloudflare-analytics.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add analytics beacon to portfolio pages
+        shell: python
+        run: |
+          from pathlib import Path
+
+          pages = [
+              'index.html',
+              'fieldnote.html',
+              'early-stage-demo.html',
+              'demo-standardizer.html',
+              'story-selector.html',
+              'gtm-systems.html',
+          ]
+          token = 'fb47a171f9b64873933c081cc037a17a'
+          snippet = """<!-- Cloudflare Web Analytics -->
+          <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token":"fb47a171f9b64873933c081cc037a17a"}'></script>
+          <!-- End Cloudflare Web Analytics -->"""
+
+          for filename in pages:
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              if token in text:
+                  continue
+              if '</body>' not in text:
+                  raise RuntimeError(f'Missing </body> in {filename}')
+              text = text.replace('</body>', snippet + '\n</body>', 1)
+              path.write_text(text, encoding='utf-8')
+      - name: Remove one-time installer
+        run: rm .github/workflows/add-cloudflare-analytics.yml
+      - name: Commit analytics setup
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html fieldnote.html early-stage-demo.html demo-standardizer.html story-selector.html gtm-systems.html .github/workflows/add-cloudflare-analytics.yml
+          git commit -m "Add Cloudflare Web Analytics to portfolio"
+          git push
